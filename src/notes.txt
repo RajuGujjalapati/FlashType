@@ -1,0 +1,4 @@
+Here i'm using animater on scroll ( library [AOS])
+checkout the link: https://michalsnik.github.io/aos/
+
+For Type Writer effect - npm install type-writer-effect

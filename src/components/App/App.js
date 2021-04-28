@@ -1,8 +1,9 @@
 import React from 'react';
 import Nav from "../Nav/Nav"
 import Landing from "../LandingPage/LandingPage"
+import Footer from "../Footer/Footer"
 import "./App.css"
-
+import ChallengeSection from '../ChallengeSection/ChallengeSection'
 class MyApp extends React.Component{
   render(){
     return (
@@ -11,6 +12,10 @@ class MyApp extends React.Component{
         <Nav />
         {/* Landing Page */}
         <Landing />
+      {/* Challenge Section */}
+      < ChallengeSection />
+      {/* Footer Section */}
+        <Footer/>
       </div>
     ) 
   }

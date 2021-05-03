@@ -2,3 +2,7 @@ Here i'm using animater on scroll ( library [AOS])
 checkout the link: https://michalsnik.github.io/aos/
 
 For Type Writer effect - npm install type-writer-effect
+
+
+
+Api Link for random text: https://baconipsum.com/api/?type=all-meat&paras=3&start-with-lorem=1&format=text

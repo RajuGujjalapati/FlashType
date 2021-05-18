@@ -4,7 +4,7 @@ import Landing from "../LandingPage/LandingPage"
 import Footer from "../Footer/Footer"
 import "./App.css"
 import ChallengeSection from '../ChallengeSection/ChallengeSection'
-const TotalTime = 16;
+const TotalTime = 60;
 const serviceUrl = "https://baconipsum.com/api/?type=all-meat&paras=3&start-with-lorem=1&format=text"
 class MyApp extends React.Component{
   state = {
@@ -33,9 +33,32 @@ class MyApp extends React.Component{
   this.setState({testInfo});// if the key and value has same name we can use single name as well.
   }
 
-  handleUserInput = (inputValue)=>{
-    console.log(inputValue);
+
+  startTime = () =>{
+    this.setState({timeStarted : true});
+    const timer = setInterval(() => {
+      if (this.state.timeRemaining > 0){
+        this.setState({
+          timeRemaining: this.state.timeRemaining -1,
+        });
+        
+      }
+      else {
+        clearInterval(timer);
+      }
+    }, 1000);
   }
+
+
+  handleUserInput = (inputValue)=>{
+    console.log(inputValue)
+    if (! this.state.timeStarted)
+    {this.startTime()};
+
+  }
+
+ 
+
   render(){
     // if we keep life cycle method in this render(), it will call multiple times
     // which going to affect the performance of code.

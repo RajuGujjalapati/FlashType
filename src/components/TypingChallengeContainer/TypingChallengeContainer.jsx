@@ -14,7 +14,7 @@ const TypingChallengeContainer = ({selectedParagraph,
     <div className="typing-challenge-container">
         {/* Details Section */}
         <div className="details-container">
-            {/* words tyoed */}
+            {/* words typed */}
           
             <ChallengeDetailsCard  cardName="words" cardValue={words}/>
 

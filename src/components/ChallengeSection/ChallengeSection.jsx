@@ -7,7 +7,7 @@ const ChallengeSection =({selectedParagraph,
      characters, 
      wpm, 
      testInfo,
-     onInputChange}) =>{
+     onInputChange, startAgain}) =>{
     return(
         <div className="challenge-section-container">
             <h1 data-aos="zoom-in-up" className="challenge-section-header">
@@ -20,7 +20,8 @@ const ChallengeSection =({selectedParagraph,
                 characters={characters} 
                 wpm={wpm}
                 testInfo={testInfo}
-                onInputChange = {onInputChange}/>
+                onInputChange = {onInputChange}
+                startAgain  = {startAgain}/>
         </div>
     )
 }

@@ -9,6 +9,7 @@ const TestContainer = ({selectedParagraph,
      characters, 
      wpm, 
      testInfo,
+     startAgain,
      onInputChange}) =>{
     return(
         <div className="test-container">
@@ -24,7 +25,7 @@ const TestContainer = ({selectedParagraph,
                         testInfo={testInfo}
                         onInputChange = {onInputChange}/>
             </div>) : (<div className="try-again-con">
-                < Tryagain words={words} characters = {characters} wpm = {wpm}/>
+                < Tryagain words={words} characters = {characters} wpm = {wpm} startAgain ={startAgain}/>
             </div>)
             }
         </div>

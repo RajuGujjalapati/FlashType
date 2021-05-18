@@ -12,6 +12,7 @@ const TestLetter = ({ individualLetterInfo }) => {
             {individualLetterInfo.testLetter}
         </span>
     );
+    
 };
 
 export default TestLetter;

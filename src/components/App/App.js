@@ -32,6 +32,10 @@ class MyApp extends React.Component{
   });
   this.setState({testInfo});// if the key and value has same name we can use single name as well.
   }
+
+  handleUserInput = (inputValue)=>{
+    console.log(inputValue);
+  }
   render(){
     // if we keep life cycle method in this render(), it will call multiple times
     // which going to affect the performance of code.
@@ -50,7 +54,8 @@ class MyApp extends React.Component{
        wpm = {this.state.wpm}
        timeRemaining = {this.state.timeRemaining}
        timeStarted = {this.state.timeStarted}
-       testInfo = {this.state.testInfo}/>
+       testInfo = {this.state.testInfo}
+       onInputChange = {this.handleUserInput} />
       {/* Footer Section */}
         <Footer/>
       </div>

@@ -14,12 +14,28 @@ class MyApp extends React.Component{
     words:0,
     characters:0,
     wpm:0,
+    testInfo: [],
+  };
+  // // Life cycle methods
+  componentDidMount(){
+  //   fetch(serviceUrl).then(response => response.text())
+  //   .then(data => {
+  //     console.log(data);
+  //     this.setState({selectedParagraph: data});
+  //   });
+  const selectedParagraphArray = this.state.selectedParagraph.split("");
+  const testInfo = selectedParagraphArray.map((selectedLetter) =>{
+    return {
+      testLetter: selectedLetter,
+      status : "notAttempted",
+    };
+  });
+  this.setState({testInfo});// if the key and value has same name we can use single name as well.
   }
   render(){
-    // fetch(serviceUrl).then(response => response.text())
-    // .then(information => {
-    //   console.log("API Response:", information)
-    // });
+    // if we keep life cycle method in this render(), it will call multiple times
+    // which going to affect the performance of code.
+    // console.log(this.state.testInfo)
     return (
       <div className="app">
         {/* Nav Section */}
@@ -33,7 +49,8 @@ class MyApp extends React.Component{
        characters = { this.state.characters }
        wpm = {this.state.wpm}
        timeRemaining = {this.state.timeRemaining}
-       timeStarted = {this.state.timeStarted}/>
+       timeStarted = {this.state.timeStarted}
+       testInfo = {this.state.testInfo}/>
       {/* Footer Section */}
         <Footer/>
       </div>

@@ -3,7 +3,7 @@ import './Footer.css'
 const Footer = () =>{
     return (
         <div className="footer-container">
-            <a href="https://github.com/Rajulearner"
+            <a href="https://github.com/RajuGujjalapati"
             target="_blank" 
             rel="noreferrer"
             className="footer-link">My Github</a>

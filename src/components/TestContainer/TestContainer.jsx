@@ -4,7 +4,7 @@ import Tryagain from "../TryAgain/TryAgain";
 import TypingChallengeContainer from '../TypingChallengeContainer/TypingChallengeContainer';
 // const TimeRemaining = 1;
 const TestContainer = ({selectedParagraph, 
-    timeStarted,timeRemaining, words, characters, wpm}) =>{
+    timeStarted,timeRemaining, words, characters, wpm, testInfo}) =>{
     return(
         <div className="test-container">
             {
@@ -15,7 +15,8 @@ const TestContainer = ({selectedParagraph,
                         timeRemaining = {timeRemaining}
                         words={words} 
                         characters={characters} 
-                        wpm={wpm} />
+                        wpm={wpm} 
+                        testInfo={testInfo}/>
             </div>) : (<div className="try-again-con">
                 < Tryagain words={words} characters = {characters} wpm = {wpm}/>
             </div>)

@@ -2,7 +2,7 @@ import React from 'react';
 import './ChallengeSection.css';
 import TestCon from '../TestContainer/TestContainer'
 const ChallengeSection =({selectedParagraph, 
-    timeStarted,timeRemaining, words, characters, wpm}) =>{
+    timeStarted,timeRemaining, words, characters, wpm, testInfo}) =>{
     return(
         <div className="challenge-section-container">
             <h1 data-aos="zoom-in-up" className="challenge-section-header">
@@ -13,7 +13,8 @@ const ChallengeSection =({selectedParagraph,
                 timeRemaining={timeRemaining} 
                 words={words} 
                 characters={characters} 
-                wpm={wpm}/>
+                wpm={wpm}
+                testInfo={testInfo}/>
         </div>
     )
 }
